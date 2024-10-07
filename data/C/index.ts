@@ -1,1 +1,2 @@
-export * from "./celo"
+export * from './celo';
+export * from './chainlink';
