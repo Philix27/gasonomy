@@ -12,6 +12,7 @@ import { solanaChain } from '../S';
 // import { wagmi } from '../R';
 // import { polygon } from '../R';
 // import { scroll } from '../R';
+// import { onChainkit } from '../R';
 import { remixIde } from '../r/remixIde';
 import { moralis } from '../m/moralis';
 import { thirdweb } from '../t/thirdweb';

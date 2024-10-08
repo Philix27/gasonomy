@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import { AppStores } from '@/lib';
 import { GoSidebarCollapse, GoSidebarExpand } from 'react-icons/go';
 import { BiFilter, BiSearch, BiSort } from 'react-icons/bi';
-import { LuFilterX } from 'react-icons/lu';
+import { LuFilterX, LuMoreHorizontal } from 'react-icons/lu';
 import { SearchInput } from '@/(core)/_comps';
 
 export interface MainNavProps {
@@ -25,15 +25,16 @@ export function NavbarMarketing(props: MainNavProps) {
       <div className="container flex h-[50px] md:h-[50px] items-center justify-between">
         <div className="flex gap-6 md:gap-10 ">
           <Link href="/" className="items-center space-x-2">
-            <TextH v="h3" className={'text-primary font-extrabold tracking-wider'}>
+            <TextH v="h4" className={'text-primary font-extrabold tracking-wider'}>
               {props.title}
             </TextH>
           </Link>
         </div>
-        <SearchInput className='w-[35%]' />
+        <SearchInput className="w-[35%]" />
         <div className="flex items-center justify-center md:gap-x-4">
           <BiSort />
           <BiSearch />
+          <LuMoreHorizontal />
           {store.drawerIsOpen ? (
             <AiOutlineClose
               size={18}
