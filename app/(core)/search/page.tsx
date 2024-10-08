@@ -39,7 +39,7 @@ export default function Page() {
             .map((val, i) => (
               <div
                 key={i}
-                className="w-full hover:bg-accent p-3 flex flex-col bg-secondary shadow-md"
+                className="w-full hover:bg-accent p-3 flex flex-col border shadow-md"
                 onClick={() => {
                   store.update({ infoTabOpen: true, drawerIsOpen: false });
                 }}

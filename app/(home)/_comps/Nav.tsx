@@ -7,8 +7,9 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useRouter } from 'next/navigation';
 import { AppStores } from '@/lib';
 import { GoSidebarCollapse, GoSidebarExpand } from 'react-icons/go';
-import { BiFilter } from 'react-icons/bi';
+import { BiFilter, BiSearch, BiSort } from 'react-icons/bi';
 import { LuFilterX } from 'react-icons/lu';
+import { SearchInput } from '@/(core)/_comps';
 
 export interface MainNavProps {
   title: string;
@@ -29,18 +30,22 @@ export function NavbarMarketing(props: MainNavProps) {
             </TextH>
           </Link>
         </div>
-
+        <SearchInput className='w-[35%]' />
         <div className="flex items-center justify-center md:gap-x-4">
+          <BiSort />
+          <BiSearch />
           {store.drawerIsOpen ? (
             <AiOutlineClose
-              className="size-[20px] text-primary"
+              size={18}
+              className=" text-primary"
               onClick={() => {
                 store.update({ drawerIsOpen: false });
               }}
             />
           ) : (
             <AiOutlineMenu
-              className="size-[20px] text-primary"
+              size={18}
+              className="text-primary"
               onClick={() => {
                 store.update({ drawerIsOpen: true });
               }}
@@ -48,14 +53,16 @@ export function NavbarMarketing(props: MainNavProps) {
           )}
           {store.infoTabOpen ? (
             <GoSidebarCollapse
-              className="size-[20px] text-primary"
+              size={18}
+              className="text-primary"
               onClick={() => {
                 store.update({ infoTabOpen: false });
               }}
             />
           ) : (
             <GoSidebarExpand
-              className="size-[20px] text-primary"
+              size={18}
+              className="text-primary"
               onClick={() => {
                 store.update({ infoTabOpen: true });
               }}
@@ -64,14 +71,16 @@ export function NavbarMarketing(props: MainNavProps) {
 
           {store.sidebarOpen ? (
             <LuFilterX
-              className="size-[20px] text-primary"
+              size={18}
+              className="text-primary"
               onClick={() => {
                 store.update({ sidebarOpen: false });
               }}
             />
           ) : (
             <BiFilter
-              className="size-[20px] text-primary"
+              size={18}
+              className="text-primary"
               onClick={() => {
                 store.update({ sidebarOpen: true });
               }}
