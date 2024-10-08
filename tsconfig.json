@@ -44,5 +44,5 @@
     "app/comps/index.ts",
     "app/lib/ess/celoWallets.sample",
     "app/(others)/dash-withdraw/.List.tsx"
-  ]
+, "app/(core)/search/page.sample"  ]
 }
